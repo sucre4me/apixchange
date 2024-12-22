@@ -1,0 +1,14 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: madapi-api-rolebinding
+  namespace: atos
+subjects:
+- kind: User
+  name: madapi
+  namespace: atos
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: madapi-api
+  apiGroup: rbac.authorization.k8s.io
